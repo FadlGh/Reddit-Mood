@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 
 src/auth.py
+src/test.py
