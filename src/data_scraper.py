@@ -11,7 +11,7 @@ reddit = praw.Reddit(
 )
 
 subreddit = reddit.subreddit("technews")
-subreddit_top = subreddit.top(limit=1)
+subreddit_top = subreddit.top(limit=100)
 
 with open('data/comments.csv', 'w', newline='', encoding='utf-8') as c:
     fieldnames = ['Text', 'Emotion']
@@ -21,5 +21,5 @@ with open('data/comments.csv', 'w', newline='', encoding='utf-8') as c:
     for post in subreddit_top:
         post.comments.replace_more(limit=0)
 
-        for comment in post.comments.list()[:5]:
+        for comment in post.comments.list()[:3]:
             writer.writerow({'Text': comment.body, 'Emotion': 'neutral'})
