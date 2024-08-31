@@ -1,8 +1,8 @@
 from transformers import pipeline
 
-classifier = pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base")
+classifier = pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base", return_all_scores=False)
 
-text = "I am gonna fucking die from this bullshit."
+s
 result = classifier(text)
 
 print(result)
