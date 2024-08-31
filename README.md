@@ -1,2 +1,2 @@
-# Twitter Mood
+# Reddit Mood
  
