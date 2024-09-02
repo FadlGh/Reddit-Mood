@@ -9,6 +9,11 @@ jobs:
     strategy:
       matrix:
         python-version: [3.8, 3.9, 3.11]
+    
+    env:
+      CLIENT_ID: ${{ secrets.CLIENT_ID }}
+      CLIENT_KEY: ${{ secrets.CLIENT_KEY }}
+      PASSWORD: ${{ secrets.PASSWORD }}
 
     steps:
     - name: Checkout code

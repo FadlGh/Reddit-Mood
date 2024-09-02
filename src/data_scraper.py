@@ -1,13 +1,16 @@
 import praw
-import auth
+import os
 import csv
+from dotenv import load_dotenv
+
+load_dotenv()
 
 reddit = praw.Reddit(
-    client_id=auth.CLIENT_ID,
-    client_secret=auth.CLIENT_KEY,
+    client_id=os.getenv('CLIENT_ID'),
+    client_secret= os.getenv('CLIENT_KEY'),
     user_agent='Mood by u/Horror_Job_566',
     username='Horror_Job_566',
-    password=auth.PASSWORD
+    password=os.getenv('PASSWORD')
 )
 
 subreddit = reddit.subreddit("Futurology")
