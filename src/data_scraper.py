@@ -10,7 +10,7 @@ reddit = praw.Reddit(
     password=auth.PASSWORD
 )
 
-subreddit = reddit.subreddit("tech")
+subreddit = reddit.subreddit("Futurology")
 subreddit_top = subreddit.top(limit=10000)
 
 with open('data/comments.csv', 'a', newline='', encoding='utf-8') as c:
